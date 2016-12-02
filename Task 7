@@ -1,0 +1,20 @@
+def isprime(n):
+    return dividedbelow(n,n-1) #checks if the given number is prime
+
+#returns th enumber
+def dividedbelow(n,m):
+    if m==1:
+        return True
+    if n%m!=0 and dividedbelow(n,m-1):
+        return True
+    else:
+        return False
+
+try:
+    number = int(input('Prime checker. Enter number: ')) #user input
+    if isprime(number):
+        print (str(number)+ 'is prime number') #returns the number if prime
+    else:
+        print (str(number) + 'is not a prime number') #returns th enumbetr if not prime
+except:
+    print ("Wrong input. Exiting...")
