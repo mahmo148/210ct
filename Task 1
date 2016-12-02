@@ -1,0 +1,7 @@
+from random import *
+
+x = [[i] for i in range(5)]
+
+shuffle(x)
+
+print (x)
